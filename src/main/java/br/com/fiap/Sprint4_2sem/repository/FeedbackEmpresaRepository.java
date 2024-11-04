@@ -1,9 +1,9 @@
 package br.com.fiap.Sprint4_2sem.repository;
 
-import br.com.fiap.Sprint4_2sem.model.Empresa;
+import br.com.fiap.Sprint4_2sem.model.FeedbackEmpresa;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
 @Repository
-public interface EmpresaRepository extends JpaRepository<Empresa, Integer> {
+public interface FeedbackEmpresaRepository extends JpaRepository<FeedbackEmpresa, Integer> {
 }
