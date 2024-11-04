@@ -4,7 +4,7 @@ import jakarta.validation.constraints.NotNull;
 import lombok.Data;
 
 @Data
-public class ColaboradorDTO {
+public class FeedbackEmpresaDTO {
 
     private Long id;
 
