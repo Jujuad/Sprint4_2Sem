@@ -22,5 +22,9 @@ public class FeedbackEmpresa {
     @ManyToOne
     @JoinColumn(name = "id_empresa")
     private Empresa empresa;
+
+    public void setIdFeedback(Integer id) {
+
+    }
 }
 

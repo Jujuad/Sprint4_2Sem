@@ -29,4 +29,15 @@ public class EnderecoService {
     public void deleteById(Integer id) {
         enderecoRepository.deleteById(id);
     }
+
+    public Endereco update(Integer id, Endereco model) {
+        // Verifica se o endereço existe
+        if (!enderecoRepository.existsById(id)) {
+            throw new RuntimeException("Endereço com ID " + id + " não encontrado");
+        }
+
+        // Define o ID do modelo que será atualizado
+        model.setIdEndereco(id);  // Ajuste se o nome do método setter for diferente
+        return enderecoRepository.save(model);
+    }
 }

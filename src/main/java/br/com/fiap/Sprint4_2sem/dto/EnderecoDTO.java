@@ -1,5 +1,6 @@
 package br.com.fiap.Sprint4_2sem.dto;
 
+import br.com.fiap.Sprint4_2sem.model.Endereco;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.Size;
 import lombok.Data;
@@ -34,5 +35,18 @@ public class EnderecoDTO {
 
     @NotBlank(message = "O campo país é obrigatório.")
     private String pais;
-}
 
+    public Endereco toModel() {
+        Endereco endereco = new Endereco();
+        endereco.setId(this.id);
+        endereco.setCep(this.cep);
+        endereco.setRua(this.rua);
+        endereco.setNumero(this.numero);
+        endereco.setBairro(this.bairro);
+        endereco.setCidade(this.cidade);
+        endereco.setEstado(this.estado);
+        endereco.setUf(this.uf);
+        endereco.setPais(this.pais);
+        return endereco;
+    }
+}

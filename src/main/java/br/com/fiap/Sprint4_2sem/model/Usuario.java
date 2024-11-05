@@ -29,4 +29,8 @@ public class Usuario {
     @Size(min = 6, message = "A senha deve ter no mínimo 6 caracteres.")
     @Column(name = "senha_usuario")
     private String senha;
+
+    public void setIdUsuario(Integer id) {
+
+    }
 }

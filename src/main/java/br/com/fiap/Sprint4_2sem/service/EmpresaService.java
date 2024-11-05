@@ -29,4 +29,8 @@ public class EmpresaService {
     public void deleteById(Integer id) {
         empresaRepository.deleteById(id);
     }
+
+    public Empresa update(Integer id, Empresa model) {
+        return null;
+    }
 }

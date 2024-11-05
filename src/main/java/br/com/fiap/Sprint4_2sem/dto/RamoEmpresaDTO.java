@@ -1,5 +1,6 @@
 package br.com.fiap.Sprint4_2sem.dto;
 
+import br.com.fiap.Sprint4_2sem.model.RamoEmpresa;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.Size;
 import lombok.Data;
@@ -15,4 +16,12 @@ public class RamoEmpresaDTO {
 
     @NotBlank(message = "O campo descrição do ramo é obrigatório.")
     private String descricao;
+
+    public RamoEmpresa toModel() {
+        RamoEmpresa ramoEmpresa = new RamoEmpresa();
+        ramoEmpresa.setId(this.id);
+        ramoEmpresa.setNome(this.nome);
+        ramoEmpresa.setDescricao(this.descricao);
+        return ramoEmpresa;
+    }
 }

@@ -29,4 +29,13 @@ public class AnaliseService {
     public void deleteById(Integer id) {
         analiseRepository.deleteById(id);
     }
+
+    public Analise update(Integer id, Analise model) {
+        if (!analiseRepository.existsById(id)) {
+            throw new RuntimeException("Análise com ID " + id + " não encontrada");
+        }
+
+        model.setId(Long.valueOf(id));
+        return analiseRepository.save(model);
+    }
 }

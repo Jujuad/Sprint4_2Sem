@@ -1,5 +1,6 @@
 package br.com.fiap.Sprint4_2sem.dto;
 
+import br.com.fiap.Sprint4_2sem.model.Empresa;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotNull;
 import jakarta.validation.constraints.Size;
@@ -26,4 +27,8 @@ public class EmpresaDTO {
 
     @NotNull(message = "O campo ramo empresa é obrigatório.")
     private Long idRamo;
+
+    public Empresa toModel() {
+        return null;
+    }
 }

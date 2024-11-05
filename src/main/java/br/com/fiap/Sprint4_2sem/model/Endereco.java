@@ -47,5 +47,8 @@ public class Endereco {
     @NotBlank(message = "O campo país é obrigatório.")
     @Column(name = "pais_endereco")
     private String pais;
+
+    public void setIdEndereco(Integer id) {
+    }
 }
 

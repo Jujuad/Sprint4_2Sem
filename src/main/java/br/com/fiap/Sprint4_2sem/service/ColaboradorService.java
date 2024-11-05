@@ -29,4 +29,8 @@ public class ColaboradorService {
     public void deleteById(Integer id) {
         colaboradorRepository.deleteById(id);
     }
+
+    public Colaborador update(Integer id, Colaborador model) {
+        return null;
+    }
 }
